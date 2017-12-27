@@ -7,7 +7,7 @@ function get_file_num_under_current_dir {
 }
 
 total_num_file=$(get_file_num_under_current_dir)
-echo "Enter your guess about the number of the files in the current directory:"
+echo "Enter your guess about the number of files in the current directory:"
 read user_guess
 while [[ $user_guess -ne $total_num_file ]]
 do
@@ -15,8 +15,7 @@ do
 	then
 		echo "Your guess is too high. Try a new guess (Your current guess is $user_guess):"
 		read user_guess
-	elif [[ $user_gusee -lt $total_num_file ]]
-	then
+	else
 		echo "Your guess is too low. Try a new guess (Your current guess is $user_guess):"
 		read user_guess
 	fi
